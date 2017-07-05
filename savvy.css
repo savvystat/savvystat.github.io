@@ -43,7 +43,7 @@ p {
   margin-bottom: 20px;
 }
 .bg-primary {
-  background-color: #3AB533;
+  background-color: #ddd;
 }
 .bg-dark {
   background-color: #222222;
@@ -209,6 +209,7 @@ header .header-content .header-content-inner p {
 }
 .section-heading {
   margin-top: 0;
+  color: black;
 }
 .service-box {
   max-width: 400px;

@@ -17,7 +17,6 @@
  </head>
 
  <body id="page-top">
-
   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
    <div class="container-fluid">
     <div class="navbar-header">
@@ -52,18 +51,12 @@
   <section class="bg-primary" id="about">
    <div class="container">
     <div class="row">
-     <div class="chartContainer">
-      <div class="chart" id='chart1'></div>
-     </div>
-<!--
      <div class="col-lg-8 col-lg-offset-2 text-center">
-      <h2 class="section-heading">The Team</h2>
-      <hr class="light">
-      <p class="text-faded">Physicist, Data Scientist, Economist, Game Developer. </p>
-      <p class="text-faded">from UC Berkeley, Harvard, MIT, and Yale. </p>
-                        <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+      <h2 class="section-heading">Inflation</h2>
+      <div class="chartContainer">
+       <div class="chart" id='chart1'></div>
+      </div>
      </div>
--->
     </div>
    </div>
   </section>
@@ -77,12 +70,6 @@
      </div>
     </div>
    </div>
-
-<!--
-    <div class="col-lg-8 col-lg-offset-2 text-center">
-      <p class="section-heading"><br>We are a team of physicists, data scientists, economists, and game developers.  <br><br></p>
-    </div>
--->
 
    <div class="container">
     <div class="row">
@@ -115,145 +102,73 @@
       </div>
      </div>
 
-<!--
-    <div class="col-lg-8 col-lg-offset-2 text-center">
-      <p class="section-heading"><br><br><br>Please send all inquiries to info@savvystat.com</p>
-      <p class="section-heading">&copy SavvyStat. All rights reserved. </p>
-    </div>
- -->
-
     </div>
    </div>
   </section>
 
-<!--
-  <section class="no-padding" id="portfolio">
-   <div class="container-fluid">
-
-    <div class="row no-gutter popup-gallery">
-     <div class="col-lg-4 col-sm-6">
-      <a href="slice1@2x.jpg" class="portfolio-box">
-       <img src="slice1.jpg" class="img-responsive" alt="">
-       <div class="portfolio-box-caption">
-        <div class="portfolio-box-caption-content">
-         <div class="project-category text-faded">
-          Data Overview
-         </div>
-         <div class="project-name">
-         </div>
-        </div>
-       </div>
-      </a>
-     </div>
-     <div class="col-lg-4 col-sm-6">
-      <a href="slice2@2x.jpg" class="portfolio-box">
-       <img src="slice2.jpg" class="img-responsive" alt="">
-       <div class="portfolio-box-caption">
-        <div class="portfolio-box-caption-content">
-         <div class="project-category text-faded">
-
-         </div>
-         <div class="project-name">
-          Analysis
-         </div>
-        </div>
-       </div>
-      </a>
-     </div>
-     <div class="col-lg-4 col-sm-6">
-      <a href="slice3@2x.jpg" class="portfolio-box">
-       <img src="slice3.jpg" class="img-responsive" alt="">
-       <div class="portfolio-box-caption">
-        <div class="portfolio-box-caption-content">
-         <div class="project-category text-faded">
-          Tracking
-         </div>
-         <div class="project-name">
-         </div>
-        </div>
-       </div>
-      </a>
-     </div>
-
-    </div>
-   </div>
-  </section>
--->
-
-   <aside class="bg-dark">
+  <aside class="bg-dark">
    <div class="container text-center">
-   <div class="call-to-action">
+    <div class="call-to-action">
      <div class="col-lg-offset-4 col-lg-4 text-center">
       <i class="fa fa-envelope-o fa-3x sr-contact"></i>
       <p><a href="mailto:your-email@your-domain.com">info@savvystat.com</a></p>
      </div>
-
-<!--
-   <h2>Coming Soon</h2>
-   <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
-
-   </div>
-   </div>
-   </aside>
-
-  <section id="contact">
-   <div class="container">
-    <div class="row">
-
-     <div class="col-lg-8 col-lg-offset-2 text-center">
-      <p class="section-heading">Please send all inquiries to info@savvystat.com</p>
-     </div>
-     <div class="col-lg-4 col-lg-offset-2 text-center">
-      <i class="fa fa-phone fa-3x sr-contact"></i>
-      <p>123-456-6789</p>
-     </div>
-     -->
     </div>
    </div>
-  </section>
+  </aside>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.5/scrollreveal.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-  <script src="savvy.js"></script>
-  <script src="d3.min.js"></script>
-  <script src="d3_timeseries.js"></script>
-  <script>
 
-function createRandomData(n,range,rand) {
-	if(range==null) range=[0,100]
-		if(rand==null) rand=1/20
-			var num = range[0] + Math.floor(Math.random()*(range[1]-range[0]))
-				var num2 = range[0] + Math.floor(Math.random()*(range[1]-range[0]))
-				var num3 = num
-				var d= new Date('2013-01-01')
-				var data = []
-				var rgen = d3.random.normal(0,(range[1]-range[0])*rand)
-				for (var i = 0; i<n; i++) {
-					data.push({date:d,n:num,n2:num2,n3:num3,
-						ci_up:num3*1.05,ci_down:num3*0.95
-					})
-					d = new Date(d.getTime() + 1000*60*60*24)
-						num = num+rgen()
-						num3 = num+rgen()/3
-						num = Math.min(Math.max(num,range[0]),range[1])
-						num2 = num2+rgen()
-						num2 = Math.min(Math.max(num2,range[0]),range[1])
-				}
-	return data;
+   </div>
+   </div>
+   </section>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.5/scrollreveal.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+   <script src="savvy.js"></script>
+   <script src="d3.min.js"></script>
+   <script src="d3_timeseries.js"></script>
+   <script>
+
+var d1 = [ 231.795, 231.916, 232.374, 232.889, 233.323, 233.632, 233.718, 234.121, 234.723, 235.385, 235.672, 235.978, 236.471, 236.832, 237.029, 237.424, 237.256, 237.486, 237.506, 237.118, 236.29, 234.913, 235.489, 235.989, 236.201, 236.891, 237.419, 237.876, 237.811, 237.467, 237.792, ];
+var d2 = [ 238, 238.9, 239.3, 239.6, 239.4, 239.2, 239.1, 239.3, 238.9, 238.7, 237.371251678199, 238.31611082172, 238.053363957529, 239.074469927267, 238.645154510462, 238.453961906011, 238.249103843579, 238.597426996334, 238.171137665666, 238.08485787316, ];
+var d3 = [ 237.792, 238.153, 237.846, 238.106, 237.808, 238.078, 238.908, 239.362, 239.842, 239.898, 240.389, 241.006, 241.694, 242.199, 242.821, 244.158, 244.456, 243.752, 244.158, 243.846, ];
+
+var with_s    = [];
+var without_s = [];
+var d = new Date();
+for (var i = 0; i < d1.length; i++) {
+ var num3 = 1000*Math.random();
+ with_s.push({
+  date:    d,
+  n3:      num3,
+  ci_up:   num3*1.01,
+  ci_down: num3*0.99,
+ });
+ without_s.push({
+  date:    d,
+  n3:      num3,
+  ci_up:   num3*1.01,
+  ci_down: num3*0.99,
+ });
+ d = new Date(d.getTime() + 1000*60*60*24);
 }
 
-var data = createRandomData(80,[0,1000],0.01)
-var chart2 = d3.timeseries()
- .addSerie(data.slice(0,60),{x:'date',y:'n'},{interpolate:'linear',color:"#a6cee3",label:"value"})
- .addSerie(data.slice(50),
-   {x:'date',y:'n3',ci_up:'ci_up',ci_down:'ci_down'},
-   {interpolate:'monotone',dashed:true,color:"#a6cee3",label:"prediction"})
-.width(900)
- chart2('#chart1')
-  </script>
+var chart = d3.timeseries()
+ .addSerie(with_s,
+   { x:'date', y:'n' },
+   { interpolate:'linear', color:"green", label:"value" })
+ .addSerie(with_s.slice(10),
+   { x:'date', y:'n3', ci_up:'ci_up', ci_down:'ci_down' },
+   { interpolate:'monotone', dashed:true, color:"black", label:"with SavvyAdjustment" })
+ .addSerie(without_s.slice(10),
+   { x:'date', y:'n3', ci_up:'ci_up', ci_down:'ci_down' },
+   { interpolate:'monotone', dashed:true, color:"#662277", label:"without SavvyAdjustment" })
+ .width(800);
+ chart('#chart1');
+   </script>
  </body>
 </html>
 

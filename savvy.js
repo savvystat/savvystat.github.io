@@ -87,14 +87,14 @@ d = new Date(d.getTime() + 1000*60*60*24);
 }
 
 var chart = d3.timeseries()
-.addSerie(with_s,
-		{ x:'date', y:'n' },
-		{ interpolate:'linear', color:"green", label:"value" })
+//.addSerie(without_s,
+		//{ x:'date', y:'n' },
+		//{ interpolate:'linear', color:"black", label:"actual" })
+.addSerie(without_s,
+		{ x:'date', y:'n3', ci_up:'ci_up', ci_down:'ci_down' },
+		{ interpolate:'monotone', color:"black", label:"without SavvyAdjustment" })
 .addSerie(with_s.slice(10),
 		{ x:'date', y:'n3', ci_up:'ci_up', ci_down:'ci_down' },
-		{ interpolate:'monotone', dashed:true, color:"black", label:"with SavvyAdjustment" })
-.addSerie(without_s.slice(10),
-		{ x:'date', y:'n3', ci_up:'ci_up', ci_down:'ci_down' },
-		{ interpolate:'monotone', dashed:true, color:"#662277", label:"without SavvyAdjustment" })
+		{ interpolate:'monotone', dashed:true, color:"#662277", label:"with SavvyAdjustment" })
 .width(800);
 chart('#chart1');

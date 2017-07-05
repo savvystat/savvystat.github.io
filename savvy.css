@@ -42,9 +42,6 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
-.bg-primary {
-  background-color: #ddd;
-}
 .bg-dark {
   background-color: #222222;
   color: white;
@@ -418,7 +415,9 @@ body {
   webkit-tap-highlight-color: #222222;
 }
 
-
+.bg-primary {
+  background-color: #ccc;
+}
 .d3_timeseries {
  cursor: pointer;
 }
@@ -448,15 +447,25 @@ body {
 }
 
 .d3_timeseries.mousevline-text {
+ margin: 10px;
  font: 20px sans-serif;
+}
+
+.d3_timeseries.tooltip td {
+ padding: 5px;
 }
 
 .d3_timeseries.tooltip {
  position: absolute;
  text-align: left;
  font: 20px sans-serif;
+ margin: 10px;
  padding: 10px;
  background: #aaa;
+}
+
+.tick {
+ font: 11px sans-serif;
 }
 
 .d3_timeseries.tooltip h4 {

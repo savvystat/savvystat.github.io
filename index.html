@@ -13,7 +13,6 @@
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" rel="stylesheet">
   <link rel="stylesheet" href="savvy.css">
-  <link rel="stylesheet" href="d3_timeseries.css">
  </head>
 
  <body id="page-top">
@@ -127,50 +126,10 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.5/scrollreveal.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-   <script src="savvy.js"></script>
    <script src="d3.min.js"></script>
    <script src="d3_timeseries.js"></script>
+   <script src="savvy.js"></script>
    <script>
-
-var d1 = [ 231.795, 231.916, 232.374, 232.889, 233.323, 233.632, 233.718, 234.121, 234.723, 235.385, 235.672, 235.978, 236.471, 236.832, 237.029, 237.424, 237.256, 237.486, 237.506, 237.118, 236.29, 234.913, 235.489, 235.989, 236.201, 236.891, 237.419, 237.876, 237.811, 237.467, 237.792, ];
-var d2 = [ 238, 238.9, 239.3, 239.6, 239.4, 239.2, 239.1, 239.3, 238.9, 238.7, 237.371251678199, 238.31611082172, 238.053363957529, 239.074469927267, 238.645154510462, 238.453961906011, 238.249103843579, 238.597426996334, 238.171137665666, 238.08485787316, ];
-var d3 = [ 237.792, 238.153, 237.846, 238.106, 237.808, 238.078, 238.908, 239.362, 239.842, 239.898, 240.389, 241.006, 241.694, 242.199, 242.821, 244.158, 244.456, 243.752, 244.158, 243.846, ];
-
-var with_s    = [];
-var without_s = [];
-var d = new Date();
-for (var i = 0; i < d1.length; i++) {
- var num3 = 1000*Math.random();
- with_s.push({
-  date:    d,
-  n3:      num3,
-  ci_up:   num3*1.01,
-  ci_down: num3*0.99,
- });
- without_s.push({
-  date:    d,
-  n3:      num3,
-  ci_up:   num3*1.01,
-  ci_down: num3*0.99,
- });
- d = new Date(d.getTime() + 1000*60*60*24);
-}
-
-var chart = d3.timeseries()
- .addSerie(with_s,
-   { x:'date', y:'n' },
-   { interpolate:'linear', color:"green", label:"value" })
- .addSerie(with_s.slice(10),
-   { x:'date', y:'n3', ci_up:'ci_up', ci_down:'ci_down' },
-   { interpolate:'monotone', dashed:true, color:"black", label:"with SavvyAdjustment" })
- .addSerie(without_s.slice(10),
-   { x:'date', y:'n3', ci_up:'ci_up', ci_down:'ci_down' },
-   { interpolate:'monotone', dashed:true, color:"#662277", label:"without SavvyAdjustment" })
- .width(800);
- chart('#chart1');
    </script>
  </body>
 </html>
-
-
-

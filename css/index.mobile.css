@@ -28,6 +28,7 @@ main {
   line-height: 40px;
   letter-spacing: 0.03em;
   position: absolute;
+  white-space: nowrap;
   top: 50%;
 }
 
